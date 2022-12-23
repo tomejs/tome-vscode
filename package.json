@@ -1,6 +1,7 @@
 {
   "name": "tome-vscode",
-  "displayName": "tome",
+  "displayName": "tome for VS Code",
+  "publisher": "tomejs",
   "description": "Syntax highlighting for tome components.",
   "version": "0.0.1",
   "engines": {
