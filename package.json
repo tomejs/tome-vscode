@@ -1,0 +1,31 @@
+{
+  "name": "tome-vscode",
+  "displayName": "tome",
+  "description": "Syntax highlighting for tome components.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "author": "Ameen Ahmed <ameen.ahmed.b@gmail.com>",
+  "contributes": {
+    "languages": [{
+      "id": "tome",
+      "aliases": ["tome", "tome"],
+      "extensions": [".tome"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "tome",
+      "scopeName": "source.tome",
+      "path": "./syntaxes/tome.tmLanguage.json"
+    }]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tomejs/tome-vscode"
+  },
+  "license": "MIT"
+}
