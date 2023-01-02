@@ -3,7 +3,7 @@
   "displayName": "tome for VS Code",
   "publisher": "tomejs",
   "description": "Syntax highlighting for tome components.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.74.0"
   },
