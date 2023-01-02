@@ -18,6 +18,29 @@
 			]
 		},
 		{
+			"name": "meta.import.tome",
+			"begin": "(import)\\s+",
+			"end": "(;)\\s+",
+			"beginCaptures": {
+				"1": {
+					"name": "keyword.control.import"
+				}
+			},
+			"endCaptures": {
+				"1": {
+					"name": "punctuation.terminator.statement"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#import-single-declaration"
+				},
+				{
+					"include": "#import-multiple-declaration"
+				}
+			]
+		},
+		{
 			"name": "meta.control.if.open.tome",
 			"begin": "(<)(if)\\s*\\(",
 			"end": "\\)(>)",
@@ -277,6 +300,39 @@
 			"captures": {
 				"1": {
 					"name": "entity.other.attribute-name.html"
+				}
+			},
+			"patterns": []
+		},
+		"import-single-declaration": {
+			"match": "([a-zA-Z_\\$][a-zA-Z0-9_\\$]*)\\s+(from)\\s+(\\'.*?\\')",
+			"captures": {
+				"1": {
+					"name": "variable.other.readwrite.js"
+				},
+				"2": {
+					"name": "keyword.control.js"
+				},
+				"3": {
+					"name": "string.quoted.single.js"
+				}
+			},
+			"patterns": []
+		},
+		"import-multiple-declaration": {
+			"match": "\\{\\s*([a-zA-Z_\\$][a-zA-Z0-9_\\$]*\\s*(,\\s*[a-zA-Z_\\$][a-zA-Z0-9_\\$]*)*)\\s*\\}\\s+(from)\\s+(\\'.*?\\')",
+			"captures": {
+				"1": {
+					"name": "variable.other.readwrite.js"
+				},
+				"2": {
+					"name": "variable.other.readwrite.js"
+				},
+				"3": {
+					"name": "keyword.control.js"
+				},
+				"4": {
+					"name": "string.quoted.single.js"
 				}
 			},
 			"patterns": []
